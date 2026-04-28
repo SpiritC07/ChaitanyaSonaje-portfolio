@@ -1,0 +1,74 @@
+* {margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Poppins',Arial,sans-serif;line-height:1.6;color:#333;}
+
+.container{max-width:1000px;margin:0 auto;padding:0 20px;}
+.navbar{background:white;position:fixed;top:0;width:100%;z-index:1000;box-shadow:0 2px 10px rgba(0,0,0,0.1);}
+.nav-container{max-width:1000px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center;height:70px;}
+.nav-logo a{font-size:1.4rem;font-weight:600;color:#1e3a8a;text-decoration:none;}
+.nav-menu{display:flex;list-style:none;gap:30px;}
+.nav-link{text-decoration:none;color:#555;font-weight:500;padding:5px 0;border-bottom:2px solid transparent;}
+.nav-link.active{color:#1e3a8a;border-bottom-color:#1e3a8a;}
+
+.hero{height:90vh;display:flex;align-items:center;background:linear-gradient(135deg,#1e3a8a,#3b82f6);color:white;padding-top:70px;}
+.hero-container{max-width:1000px;margin:0 auto;padding:0 20px;width:100%;}
+.hero-content{display:flex;align-items:center;gap:50px;}
+.profile-image img{width:250px;height:250px;border-radius:50%;border:4px solid white;}
+.hero-text h1{font-size:3rem;margin-bottom:10px;}
+.tagline{font-size:1.2rem;margin-bottom:30px;opacity:0.9;}
+.cta-button{display:inline-block;background:white;color:#1e3a8a;padding:15px 30px;text-decoration:none;border-radius:30px;font-weight:500;}
+
+main{padding:100px 0;}
+h1{font-size:2.5rem;color:#1e3a8a;text-align:center;margin-bottom:30px;}
+h2{font-size:1.8rem;color:#1e40af;margin-bottom:30px;}
+
+.bio-content{max-width:700px;margin:0 auto 50px;text-align:center;}
+.bio-content p{font-size:1.1rem;margin-bottom:20px;}
+.details-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
+.detail-item{background:#f8f9fa;padding:20px;border-radius:8px;border-left:4px solid #1e3a8a;}
+.detail-label{font-weight:600;color:#1e40af;display:block;}
+.detail-value{color:#666;margin-top:5px;}
+
+.skills-grid{display:flex;flex-direction:column;gap:20px;}
+.skill-item{background:white;padding:20px;border-radius:8px;border:1px solid #e0e0e0;}
+.skill-header{display:flex;justify-content:space-between;margin-bottom:10px;}
+.skill-header span:first-child{font-weight:600;color:#1e3a8a;}
+.skill-bar{height:10px;background:#e0e0e0;border-radius:5px;overflow:hidden;}
+.skill-progress{height:100%;background:#1e3a8a;border-radius:5px;}
+
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;}
+.project-card{background:white;border-radius:10px;overflow:hidden;box-shadow:0 5px 15px rgba(0,0,0,0.1);}
+.project-image img{width:100%;height:200px;object-fit:cover;}
+.project-content{padding:25px;}
+.project-content h3{color:#1e3a8a;margin-bottom:10px;}
+.project-content p{color:#666;margin-bottom:20px;}
+.project-buttons{display:flex;gap:10px;}
+.btn{flex:1;padding:12px 20px;border-radius:6px;text-decoration:none;font-weight:500;text-align:center;}
+.btn-primary{background:#1e3a8a;color:white;}
+.btn-secondary{background:#f8f9fa;color:#1e3a8a;border:1px solid #1e3a8a;}
+
+/* Mobile */
+@media (max-width:768px){
+    .nav-menu{display:none;}
+    .hero-content{flex-direction:column;text-align:center;gap:30px;}
+    .hero-text h1{font-size:2.2rem;}
+    .profile-image img{width:200px;height:200px;}
+    .projects-grid{grid-template-columns:1fr;}
+    .project-buttons{flex-direction:column;}
+    h1{font-size:2rem;}
+}
+
+/* Active page highlighting */
+.home-page .nav-link[href="index.html"],
+.about-page .nav-link[href="about.html"],
+.skills-page .nav-link[href="skills.html"],
+.projects-page .nav-link[href="projects.html"]{color:#1e3a8a;border-bottom-color:#1e3a8a;}
+
+/* Footer */
+.footer{background:#1e3a8a;color:white;padding:40px 0 20px;}
+.footer-content{text-align:center;}
+.footer-content h3{margin-bottom:20px;color:#fff;}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px;max-width:600px;margin:0 auto 30px;}
+.contact-item{padding:10px;background:rgba(255,255,255,0.1);border-radius:6px;}
+.contact-link{color:#3b82f6;text-decoration:none;font-weight:500;}
+.contact-link:hover{text-decoration:underline;}
+.footer-copy{color:#94a3b8;font-size:0.9rem;}
